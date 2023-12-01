@@ -19,5 +19,25 @@
     <a href="pages/elec.html">Ingénierie Électronique et Électrique</a>
   </nav>
 
+	<footer>
+    <p class="author">Jérémy Poirier</p>
+    <p class="date-time" id="date-time"></p>
+	</footer>
+
+  <script>
+    // Script to display current date and time
+    function updateDateTime() {
+      var dateTimeElement = document.getElementById("date-time");
+      var currentDate = new Date();
+      var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString('fr-FR', options);
+      dateTimeElement.textContent = formattedDate;
+    }
+
+    // Update date and time initially and set interval for continuous update
+    updateDateTime();
+    setInterval(updateDateTime, 1000); // Update every second
+  </script>
+
 </body>
 </html>

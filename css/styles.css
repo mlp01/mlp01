@@ -1,7 +1,14 @@
+@font-face {
+  font-family: 'SF Pro'; /* Name you want to use for the font */
+  src: url('../fonts/SF-Pro.ttf') format('ttf'); /* Add other formats as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: black;
   color: white;
-  font-family: SF Pro, Regular;
+  font-family: 'SF Pro', Arial, sans-serif;
   text-align: center;
   margin: 0;
 }
@@ -53,4 +60,24 @@ nav a:hover {
 
 .back-button:hover {
   background-color: #555;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 10px;
+}
+
+.author {
+  color: white;
+  margin-left: 10px;
+}
+
+.date-time {
+  color: white;
+  margin-right: 30px;
 }
