@@ -1,35 +1,56 @@
 body {
   background-color: black;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: SF Pro, Regular;
   text-align: center;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
+
+header {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 1.5em;
+	color: #ccc;
+	margin-bottom: 15px;
+}
 
 nav {
-  padding: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  justify-content: center; /* Center the buttons horizontally */
-}
-
-nav li {
-  margin-right: 20px;
+  flex-direction: column; /* Change flex direction to column */
+  align-items: center; /* Center items horizontally */
 }
 
 nav a {
   text-decoration: none;
   color: white;
-  padding: 10px 20px; /* Add padding to the buttons */
-  border-radius: 15px; /* Make buttons rounded */
-  border: 2px solid white; /* Add border to the buttons */
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin: 10px 0; /* Add margin between buttons (adjust as needed) */
 }
 
 nav a:hover {
-  background-color: #333; /* Change background color on hover */
+  background-color: #333;
+}
+
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.back-button:hover {
+  background-color: #555;
 }
