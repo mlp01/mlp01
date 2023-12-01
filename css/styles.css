@@ -3,10 +3,10 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
+  margin: 0; /* Remove default margin */
 }
 
 nav {
-  background-color: #333;
   padding: 10px;
 }
 
@@ -14,14 +14,22 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
 }
 
 nav li {
-  display: inline;
   margin-right: 20px;
 }
 
 nav a {
   text-decoration: none;
   color: white;
+  padding: 10px 20px; /* Add padding to the buttons */
+  border-radius: 15px; /* Make buttons rounded */
+  border: 2px solid white; /* Add border to the buttons */
+}
+
+nav a:hover {
+  background-color: #333; /* Change background color on hover */
 }
