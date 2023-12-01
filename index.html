@@ -1,9 +1,34 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Changer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #changeColorButton {
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
 <body>
-  <h1>YOUR NAME</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
 
+  <h1>Hello, this is some text!</h1>
+  <button id="changeColorButton" onclick="changeBackgroundColor()">Change Background Color</button>
+
+  <script>
+    function changeBackgroundColor() {
+      // Generate a random color
+      var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+      // Change the background color
+      document.body.style.backgroundColor = randomColor;
+    }
+  </script>
+
+</body>
 </html>
