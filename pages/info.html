@@ -4,26 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
-  <title>Info Page</title>
+  <title>Jérémy Poirier</title>
+  <script defer src="../js/getRandomColor.js"></script>
 </head>
+	
 <body>
 
-  <section>
-    <h2>Contexte</h2>
-    <p>Text about the context...</p>
-  </section>
+  <h1 class="page-title">Informatique et Développement Logiciel</h1>
 
-  <section>
-    <h2>Fonctionnalités</h2>
-    <p>Text about the features...</p>
-  </section>
+  <h2 class="article-title">macOS dock</h2>
+  <section class="article">
+    <div class="article-content">
+      <h3>Sujet</h3>
+      <p class="subject">Reproduction du dock de macos pour windows 10 & 11.</p>
 
-  <section>
-    <h2>Implémentation</h2>
-    <p>Text about the implementation...</p>
-  </section>
+      <h3>Contexte</h3>
+      <p>Projet personnel démarré en 2019, arrêté en 2021.</p>
 
-	<a href="../index.html" class="back-button">Back to Main Page</a>
+      <h3>Fonctionnalités</h3>
+      <ul>
+        <li> Lancer, minimiser et fermer des applications </li>
+        <li> Indicateur d’applications ouvertes </li>
+        <li> Menu déroulant avec options pour chaque application </li>
+        <li> Paramétrage de chaque application dans le dock : changer l’icône et sa taille,
+le nom de l’application et le chemin d’exécution </li>
+        <li> Effet de flou dynamique selon le contenu se trouvant derrière le dock </li>
+        <li> Fenêtre de paramètres permettant de définir l’opacité, la taille, la
+magnification et le thème (clair ou sombre) du dock </li>
+        <li> Fenêtre de gestion de la luminosité des écrans </li>
+      </ul>
+
+      <h3>Implémentation</h3>
+      <p>Languages de programmation : principalement <span style="color: white;"> C#</span> et <span style="color: white;"> XAML</span>, quelques éléments
+en <span style="color: white;"> C++</span><br>
+IDE : <span style="color: white;"> Visual Studio 2019</span> et  <span style="color: white;"> Visual Studio Code</span></p>
+    </div>
+  </section>
+  
+
+  <a href="../index.html" class="back-button">Retour</a>
+
+  <script defer>
+	const colors = ['#D66E2B', '#0080FF', '#479B50', '#3E44BC', '#EB502F', '#5B2DF5']
+	  
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all article elements on the page
+      const articleElements = document.querySelectorAll('.article');	
+
+      // Loop through each article and assign a random color
+      articleElements.forEach(function(article, index) {
+        // Get the h2 element outside the current article
+        const h2Element = document.querySelector(`.article-title:nth-of-type(${index + 1})`);
+
+        // Get the h3 element within the current article
+        const h3Elements = article.querySelectorAll('.article-content h3');
+		  
+        // Get a random color
+        const randomColor = getRandomColor();
+
+        // Apply the random color to the h2 and h3 elements, and the background of the article
+        h2Element.style.color = randomColor;
+        h3Elements.forEach(function(h3Element) {
+          h3Element.style.color = randomColor;
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
