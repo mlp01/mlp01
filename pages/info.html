@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/styles.css">
   <title>Jérémy Poirier</title>
-  <script defer src="../js/getRandomColor.js"></script>
+  <script defer src="../js/functions.js"></script>
 </head>
 	
 <body>
@@ -16,7 +16,7 @@
   <section class="article">
     <div class="article-content">
       <h3>Sujet</h3>
-      <p class="subject">Reproduction du dock de macos pour windows 10 & 11.</p>
+      <p class="subject">Reproduction du dock de macOS pour windows 10 & 11.</p>
 
       <h3>Contexte</h3>
       <p>Projet personnel démarré en 2019, arrêté en 2021.</p>
@@ -28,16 +28,22 @@
         <li> Menu déroulant avec options pour chaque application </li>
         <li> Paramétrage de chaque application dans le dock : changer l’icône et sa taille,
 le nom de l’application et le chemin d’exécution </li>
+        <li> Modifier la position d'une application dans le dock </li>
+        <li> Retirer une application du dock en la faisant glisser à l'extérieur du dock</li>
+        <li> Animations pour le dock et le déplacements des applications</li>
+        <li> Automatiquement cacher/montrer le dock selon l'état de la fenêtre active (maximisée, restaurée, plein écran); contrairement à macOS, lorsque cette option est active, le dock n'est pas caché si une fenêtre est restaurée (visible sans être maximisée) et que la fenêtre n'est pas au dessus de la zone du dock </li>
         <li> Effet de flou dynamique selon le contenu se trouvant derrière le dock </li>
         <li> Fenêtre de paramètres permettant de définir l’opacité, la taille, la
 magnification et le thème (clair ou sombre) du dock </li>
-        <li> Fenêtre de gestion de la luminosité des écrans </li>
+        <li> Outil de gestion de la luminosité des écrans (application développée séparément) </li>
       </ul>
 
       <h3>Implémentation</h3>
       <p>Languages de programmation : principalement <span style="color: white;"> C#</span> et <span style="color: white;"> XAML</span>, quelques éléments
 en <span style="color: white;"> C++</span><br>
 IDE : <span style="color: white;"> Visual Studio 2019</span> et  <span style="color: white;"> Visual Studio Code</span></p>
+
+      <img src="../images/dock.png">
     </div>
   </section>
   

@@ -92,9 +92,8 @@ footer {
 .article {
   background-color: #161617; /* Darker background color */
   color: darkgrey;
-  padding: 10px 30px 20px;
+  padding: 10px 30px 10px;
   border-radius: 20px;
-  margin-bottom: 20px;
   width: 75%; /* 75% of page width */
   margin: auto; /* Center the article */
   text-align: left; /* Align text to the left */
@@ -115,4 +114,15 @@ footer {
 .article-content .subject {
   /* Add additional styling for the content of the article */
   color: white
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.article.has-image {
+  padding-bottom: 0; /* Adjusted padding when there is an image */
 }
